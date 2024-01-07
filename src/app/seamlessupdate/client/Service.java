@@ -37,6 +37,8 @@ import java.util.zip.ZipFile;
 
 import libcore.io.IoUtils;
 
+import java.util.Arrays;
+
 public class Service extends IntentService {
     private static final String TAG = "Service";
     static final String INTENT_EXTRA_NETWORK = "network";
@@ -245,8 +247,12 @@ public class Service extends IntentService {
             try (final BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 metadata = reader.readLine().split(" ");
             }
+	    
 
-            final String targetIncremental = metadata[0];
+	    final String arrayString = Arrays.toString(metadata);
+	    //Log.d(TAG, "metadata : " + arrayString);
+
+	    final String targetIncremental = metadata[0];
             final long targetBuildDate = Long.parseLong(metadata[1]);
             final long sourceBuildDate = SystemProperties.getLong("ro.build.date.utc", 0);
             if (targetBuildDate <= sourceBuildDate) {
