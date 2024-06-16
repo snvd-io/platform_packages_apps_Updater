@@ -18,7 +18,7 @@ public class PeriodicJob extends JobService {
     private static final String TAG = "PeriodicJob";
     private static final int JOB_ID_PERIODIC = 1;
     private static final int JOB_ID_RETRY = 2;
-    private static final long INTERVAL_MILLIS = 4 * 60 * 60 * 1000;
+    private static final long INTERVAL_MILLIS = 6 * 60 * 60 * 1000;
     private static final long MIN_LATENCY_MILLIS = 4 * 60 * 1000;
     private static final String EXTRA_JOB_CHANNEL = "extra_job_channel";
 
