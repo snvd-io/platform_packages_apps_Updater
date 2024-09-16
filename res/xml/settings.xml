@@ -10,13 +10,13 @@
             app:allowDividerBelow="false"
             app:iconSpaceReserved="false">
 
-        <ListPreference app:key="channel"
+        <!--ListPreference app:key="channel"
                 app:title="@string/channel_title"
                 app:iconSpaceReserved="false"
                 app:useSimpleSummaryProvider="true"
                 app:entries="@array/channel_entries"
                 app:entryValues="@array/channel_values"
-                app:defaultValue="@string/channel_default" />
+                app:defaultValue="@string/channel_default" /-->
 
         <ListPreference app:key="network_type"
                 app:persistent="false"
